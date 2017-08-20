@@ -1,0 +1,43 @@
+{
+    "name": "mavinoo/telegrambot",
+    "description": "Telegram Notifications Driver",
+    "keywords": [
+      "telegram notification",
+      "laravel",
+      "telegram",
+      "notification",
+      "telegram notifications channel plus"
+    ],
+    "homepage": "https://github.com/mavinoo/telegrambot",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Mohammad Ghanbari",
+            "email": "wordpress.iran@gmail.com",
+            "homepage": "http://mavino.ir",
+            "role": "Developer"
+        }
+    ],
+    "require": {
+        "php": ">=5.6.4",
+        "guzzlehttp/guzzle": "^6.2",
+        "illuminate/notifications": "5.3.* || 5.4.* || 5.5.*",
+        "illuminate/support": "5.1.* || 5.2.* || 5.3.* || 5.4.* || 5.5.*"
+    },
+    "require-dev": {
+        "mockery/mockery": "^0.9.5",
+        "phpunit/phpunit": "5.*",
+        "orchestra/testbench": "3.4.x-dev"
+    },
+    "autoload": {
+        "psr-4": {
+            "NotificationChannelsPlus\\Telegrambot\\": "src"
+        }
+    },
+    "scripts": {
+        "test": "vendor/bin/phpunit"
+    },
+    "config": {
+        "sort-packages": true
+    }
+}

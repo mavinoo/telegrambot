@@ -32,16 +32,16 @@ You can install the package via composer:
 
 ``` bash
     "require": {
-        "mavinoo/telegramBot": "dev-master"
+        "mavinoo/telegrambot": "dev-master"
     },
     "repositories": [
         {
             "type":"package",
             "package": {
-              "name": "mavinoo/telegramBot",
+              "name": "mavinoo/telegrambot",
               "version":"dev-master",
               "source": {
-                  "url": "https://github.com/mavinoo/telegramBot.git",
+                  "url": "https://github.com/mavinoo/telegrambot.git",
                   "type": "git",
                   "reference":"master"
                 }
@@ -63,7 +63,7 @@ You must install the service provider:
 // config/app.php
 'providers' => [
     ...
-    NotificationChannelsPlus\TelegramBot\TelegramBotServiceProvider::class,
+    NotificationChannelsPlus\Telegrambot\TelegrambotServiceProvider::class,
 ],
 ```
 
@@ -87,8 +87,8 @@ Then, configure your Telegram Bot API Token:
 You can now use the channel in your `via()` method inside the Notification class.
 
 ``` php
-use NotificationChannelsPlus\TelegramBot\TelegramChannel;
-use NotificationChannelsPlus\TelegramBot\TelegramMessage;
+use NotificationChannelsPlus\Telegrambot\TelegramChannel;
+use NotificationChannelsPlus\Telegrambot\TelegramMessage;
 use Illuminate\Notifications\Notification;
 
 class InvoicePaid extends Notification
@@ -121,8 +121,8 @@ Here's a screenshot preview of the above notification on Telegram Messenger:
 You can now use the channel in your `via()` method inside the Notification class.
 
 ``` php
-use NotificationChannelsPlus\TelegramBot\TelegramChannel;
-use NotificationChannelsPlus\TelegramBot\TelegramMessage;
+use NotificationChannelsPlus\Telegrambot\TelegramChannel;
+use NotificationChannelsPlus\Telegrambot\TelegramMessage;
 use Illuminate\Notifications\Notification;
 
 class InvoicePaid extends Notification

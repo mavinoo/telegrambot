@@ -17,6 +17,7 @@ This package makes it easy to send Telegram notification using [Telegram Bot API
 ## Installation
 
 You can install the package via composer:
+
 1: Change composer.json
 
 ``` bash

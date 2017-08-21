@@ -2,7 +2,6 @@
 
 [![Latest Version on Packagist](https://img.shields.io/packagist/v/laravel-notification-channels/telegram.svg?style=flat-square)](https://packagist.org/packages/mavinoo/telegrambot)
 [![Software License](https://img.shields.io/badge/license-MIT-brightgreen.svg?style=flat-square)](LICENSE.md)
-[![Code Coverage](https://img.shields.io/scrutinizer/coverage/g/mavinoo/telegrambot/master.svg?style=flat-square)](https://scrutinizer-ci.com/g/mavinoo/telegrambot/?branch=master)
 [![Total Downloads](https://img.shields.io/packagist/dt/mavinoo/telegrambot.svg?style=flat-square)](https://packagist.org/packages/mavinoo/telegrambot)
 
 This package makes it easy to send Telegram notification using [Telegram Bot API](https://core.telegram.org/bots) with Laravel 5.3.
@@ -14,11 +13,6 @@ This package makes it easy to send Telegram notification using [Telegram Bot API
 - [Usage](#usage)
 	- [Available Message methods](#available-message-methods)
 - [Alternatives](#alternatives)
-- [Changelog](#changelog)
-- [Testing](#testing)
-- [Security](#security)
-- [Contributing](#contributing)
-- [Credits](#credits)
 - [License](#license)
 
 ## Installation
@@ -99,12 +93,6 @@ class InvoicePaid extends Notification
 }
 ```
 
-Here's a screenshot preview of the above notification on Telegram Messenger:
-
-![Laravel Telegram Notification Example](https://cloud.githubusercontent.com/assets/1915268/17590374/2e05e872-5ff7-11e6-992f-63d5f3df2db3.png)
-
-
-
 ## Usage sendPhoto
 
 You can now use the channel in your `via()` method inside the Notification class.
@@ -136,33 +124,13 @@ class InvoicePaid extends Notification
 }
 ```
 
-
-
-
-### Routing a message
-
-You can either send the notification by providing with the chat id of the recipient to the `to($chatId)` method like shown in the above example or add a `routeNotificationForTelegram()` method in your notifiable model:
-
-``` php
-...
-/**
- * Route notifications for the Telegram channel.
- *
- * @return int
- */
-public function routeNotificationForTelegram()
-{
-    return $this->telegram_user_id;
-}
-...
-```
-
 ### Available Message methods
 
 - `to($chatId)`: (integer) Recipient's chat id.
 - `content('')`: (string) Notification message, supports markdown. For more information on supported markdown styles, check out these [docs](https://telegram-bot-sdk.readme.io/docs/sendmessage#section-markdown-style).
 - `button($text, $url)`: (string) Adds an inline "Call to Action" button. You can add as many as you want and they'll be placed 2 in a row.
 - `options([])`: (array) Allows you to add additional or override `sendMessage` payload (A Telegram Bot API method used to send message internally). For more information on supported parameters, check out these [docs](https://telegram-bot-sdk.readme.io/docs/sendmessage).
+
 
 ## Alternatives
 

@@ -36,16 +36,14 @@ You can install the package via composer:
     },
     "repositories": [
         {
-            "type":"package",
-            "package": {
-              "name": "mavinoo/telegrambot",
-              "version":"dev-master",
-              "source": {
-                  "url": "https://github.com/mavinoo/telegrambot.git",
-                  "type": "git",
-                  "reference":"master"
-                }
-            }
+		{
+		    "packagist": false
+		},
+            	{
+		  "url": "https://github.com/mavinoo/telegrambot.git",
+		  "type": "git",
+		  "reference":"master"
+		}
         }
     ],
 ```

@@ -12,7 +12,6 @@ This package makes it easy to send Telegram notification using [Telegram Bot API
 	- [Setting up your Telegram bot](#setting-up-your-telegram-bot)
 - [Usage](#usage)
 	- [Available Message methods](#available-message-methods)
-- [Alternatives](#alternatives)
 - [License](#license)
 
 ## Installation
@@ -123,13 +122,6 @@ class InvoicePaid extends Notification
     }
 }
 ```
-
-### Available Message methods
-
-- `to($chatId)`: (integer) Recipient's chat id.
-- `content('')`: (string) Notification message, supports markdown. For more information on supported markdown styles, check out these [docs](https://telegram-bot-sdk.readme.io/docs/sendmessage#section-markdown-style).
-- `button($text, $url)`: (string) Adds an inline "Call to Action" button. You can add as many as you want and they'll be placed 2 in a row.
-- `options([])`: (array) Allows you to add additional or override `sendMessage` payload (A Telegram Bot API method used to send message internally). For more information on supported parameters, check out these [docs](https://telegram-bot-sdk.readme.io/docs/sendmessage).
 
 
 ## Alternatives

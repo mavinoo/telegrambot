@@ -19,7 +19,7 @@ This package makes it easy to send Telegram notification using [Telegram Bot API
 You can install the package via composer:
 
 ``` 
-composer require mavinoo/telegrambot
+composer require mavinoo/telegrambot:dev-master
 ```
 
 

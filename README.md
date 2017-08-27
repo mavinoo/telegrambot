@@ -68,10 +68,11 @@ class InvoicePaid extends Notification
     {
         $url = url('/invoice/' . $this->invoice->id);
 
-        return TelegramMessage::create()
-            ->to($this->user->telegram_user_id) // Optional.
-            ->content("*HELLO!* \n One of your invoices has been paid!") // Markdown supported.
-            ->button('View Invoice', $url); // Inline Button
+        $tg = TelegramMessage::create()
+		    ->to($this->user->telegram_user_id) // Optional.
+		    ->content("*HELLO!* \n One of your invoices has been paid!") // Markdown supported.
+		    ->button('View Invoice', $url); // Inline Button
+	return $tg;
     }
 }
 ```
@@ -96,13 +97,15 @@ class InvoicePaid extends Notification
     {
         $url = url('/invoice/' . $this->invoice->id);
 
-        return TelegramMessage::create()
-            ->to($this->user->telegram_user_id) // Optional.
-            ->sendPhoto([
-                'caption'   =>  'Hello Mohammad',
-                'photo'     =>  'http://www.ilovegenerator.com/large/i-love-mohamed-132309992962.png',
-            ]) // Markdown supported.
-            ->button('View Invoice', $url); // Inline Button
+        $tg = TelegramMessage::create()
+		    ->to($this->user->telegram_user_id) // Optional.
+		    ->sendPhoto([
+			'caption'   =>  'Hello Mohammad',
+			'photo'     =>  'http://www.ilovegenerator.com/large/i-love-mohamed-132309992962.png',
+		    ]) // Markdown supported.
+		    ->button('View Invoice', $url);
+	    
+	return $tg;
     }
 }
 ```

@@ -127,4 +127,9 @@ class TelegramMessage
     {
         return $this->payload;
     }
+
+    public function setResult($data)
+    {
+        session()->flash('resultTg', json_decode($data, true));
+    }
 }

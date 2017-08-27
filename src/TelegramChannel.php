@@ -32,19 +32,16 @@ class TelegramChannel
     {
         $message = $notification->toTelegram($notifiable);
 
-        if (is_string($message)) {
+        if (is_string($message))
             $message = TelegramMessage::create($message);
-        }
 
-        if ($message->toNotGiven()) {
-            if (!$to = $notifiable->routeNotificationFor('telegram')) {
+        if ($message->toNotGiven())
+        {
+            if (!$to = $notifiable->routeNotificationFor('telegram'))
                 throw CouldNotSendNotification::chatIdNotProvided();
-            }
 
             $message->to($to);
         }
-
-        
 
         $params = $message->toArray();
 
@@ -52,6 +49,9 @@ class TelegramChannel
         if(isset($params['photo']) AND !empty($params['photo']))
             $methodSend = 'sendPhoto';
 
-        $this->telegram->sendMessage($methodSend, $params);
+        $result = $this->telegram->sendMessage($methodSend, $params);
+        $message->setResult($result);
+        return $result;
+
     }
 }

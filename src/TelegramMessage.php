@@ -132,4 +132,10 @@ class TelegramMessage
     {
         session()->flash('resultTg', json_decode($data, true));
     }
+    
+    public function getResult()
+    {
+        return session('resultTg');
+    }
+
 }
